@@ -36,15 +36,19 @@ class Solution {
             c++;
             for(int i: m.get(x).adj) {
                 topo[i] = topo[i]-1;
-            }
-            if(q.isEmpty()) {
-                for(int i=0; i<n; ++i) {
-                    if(topo[i] == 0) {
-                        q.offer(i);
-                        topo[i] = -1;
-                    }
+                if(topo[i] == 0) {
+                    q.offer(i);
+                    topo[i] = -1;
                 }
             }
+            // if(q.isEmpty()) {
+            //     for(int i=0; i<n; ++i) {
+            //         if(topo[i] == 0) {
+            //             q.offer(i);
+            //             topo[i] = -1;
+            //         }
+            //     }
+            // }
         }
         if(c == n) return res;
         return new int[0];
