@@ -55,7 +55,7 @@ class Solution {
                     if(mem.containsKey(p.d)) {
                         if(mem.get(p.d).containsKey(dst)) {
                             res[i] = p.val * mem.get(p.d).get(dst);
-                            System.out.println(p.val + " - " + mem.get(p.d).get(dst) + " - " + res[i]);
+                            // System.out.println(p.val + " - " + mem.get(p.d).get(dst) + " - " + res[i]);
                             f = true;
                             break;
                         }
