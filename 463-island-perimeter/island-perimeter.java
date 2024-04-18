@@ -8,7 +8,7 @@ class Solution {
             for(int j=0; j<n; ++j) {
                 if(grid[i][j] == 1) {
                     q.offer(new int[]{i,j});
-                    break;
+                    // break;
                 }
             }
         }
@@ -28,11 +28,11 @@ class Solution {
             if(r-1 < 0 || grid[r-1][c] == 0) res++;
             if(r+1 >= m || grid[r+1][c] == 0) res++;
 
-            for(int i=0; i<4; ++i) {
-                int r1 = r + d1[i];
-                int c1 = c + d2[i];
-                if(r1 >=0 && r1<m && c1>=0 && c1<n && grid[r1][c1] == 1 && !vis[r1][c1]) q.offer(new int[]{r1, c1});
-            }
+            // for(int i=0; i<4; ++i) {
+            //     int r1 = r + d1[i];
+            //     int c1 = c + d2[i];
+            //     if(r1 >=0 && r1<m && c1>=0 && c1<n && grid[r1][c1] == 1 && !vis[r1][c1]) q.offer(new int[]{r1, c1});
+            // }
         }
         return res;
     }
